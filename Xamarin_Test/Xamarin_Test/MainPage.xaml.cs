@@ -111,21 +111,6 @@ namespace Xamarin_Test
                 firstNumber = secondNumber = 0;
                 currrentState = 1;
 
-
-                //if (string.IsNullOrWhiteSpace(Calculation.OperationID.ToString()))
-                //{
-                //    // Save
-                //    var filename = Path.Combine(App.FolderPath, $"{Path.GetRandomFileName()}.Operations.txt");
-                //    File.WriteAllText(filename, Calculation.OperationResult);
-                //}
-                //else
-                //{
-                //    // Update
-                //    File.WriteAllText(Calculation.OperationID.ToString(), Calculation.OperationResult);
-                //}
-
-                //await Navigation.PopAsync();
-
             }
         }
 
