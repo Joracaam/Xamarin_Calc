@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Xamarin_Test.MainPage"
+             Title="Calculadora">
+
+    <StackLayout >
+        <Grid Padding="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="400"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Fila 0-->
+            <Label
+                x:Name="resultText" FontSize="48" Text="0"
+                TextColor="Black" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
+                LineBreakMode="NoWrap" Grid.Row="0" Grid.ColumnSpan="4" Margin="10,10,10,10"/>
+            <!--Fila 1-->
+
+            <Button Text="C" Grid.Row="1"  Grid.Column="0"
+                    TextColor="OrangeRed" BackgroundColor="#E4E4E4" BorderColor="#D2D2D2"
+                    FontSize="36" CornerRadius="40" Clicked="OnClear"/>
+
+            <Button Text="H" Grid.Row="1"  Grid.Column="1"
+                    TextColor="Green" BackgroundColor="#E4E4E4" BorderColor="#D2D2D2"
+                    FontSize="36" CornerRadius="40" Clicked="onHistoryClicked"/>
+
+
+
+            <Button Text="÷" Grid.Row="1"  Grid.Column="3"
+                    TextColor="Green" BackgroundColor="#E4E4E4" BorderColor="#D2D2D2"
+                    FontSize="36" CornerRadius="40" Clicked="OnSelectOperator"/>
+
+            <!--Fila 2-->
+            <!--Fila 7, 8 , 9, X-->
+            <Button Text="7" Grid.Row="2"  Grid.Column="0"
+                    TextColor="Black" BackgroundColor="#E4E4E4" BorderColor="#D2D2D2"
+                    FontSize="36" CornerRadius="40" Clicked="OnSelectNumber"/>
+            
+            <Button Text="8" Grid.Row="2"  Grid.Column="1"
+                    TextColor="Black" BackgroundColor="#E4E4E4" BorderColor="#D2D2D2"
+                    FontSize="36" CornerRadius="40" Clicked="OnSelectNumber"/>
+            
+            <Button Text="9" Grid.Row="2"  Grid.Column="2"
+                    TextColor="Black" BackgroundColor="#E4E4E4" BorderColor="#D2D2D2"
+                    FontSize="36" CornerRadius="40" Clicked="OnSelectNumber"/>
+
+            <Button Text="×" Grid.Row="2"  Grid.Column="3"
+                    TextColor="Green" BackgroundColor="#E4E4E4" BorderColor="#D2D2D2"
+                    FontSize="36" CornerRadius="40" Clicked="OnSelectOperator"/>
+
+            <!--Fila 3-->
+            <!--Fila 4, 5, 6, - -->
+            <Button Text="4" Grid.Row="3"  Grid.Column="0"
+                    TextColor="Black" BackgroundColor="#E4E4E4" BorderColor="#D2D2D2"
+                    FontSize="36" CornerRadius="40" Clicked="OnSelectNumber"/>
+
+            <Button Text="5" Grid.Row="3"  Grid.Column="1"
+                    TextColor="Black" BackgroundColor="#E4E4E4" BorderColor="#D2D2D2"
+                    FontSize="36" CornerRadius="40" Clicked="OnSelectNumber"/>
+
+            <Button Text="6" Grid.Row="3"  Grid.Column="2"
+                    TextColor="Black" BackgroundColor="#E4E4E4" BorderColor="#D2D2D2"
+                    FontSize="36" CornerRadius="40" Clicked="OnSelectNumber"/>
+
+            <Button Text="-" Grid.Row="3"  Grid.Column="3"
+                    TextColor="Green" BackgroundColor="#E4E4E4" BorderColor="#D2D2D2"
+                    FontSize="36" CornerRadius="40" Clicked="OnSelectOperator"/>
+
+
+            <!--Fila 4-->
+            <!--Fila 1, 2, 3, +-->
+
+            <Button Text="1" Grid.Row="4"  Grid.Column="0"
+                    TextColor="Black" BackgroundColor="#E4E4E4" BorderColor="#D2D2D2"
+                    FontSize="36" CornerRadius="40" Clicked="OnSelectNumber"/>
+
+            <Button Text="2" Grid.Row="4"  Grid.Column="1"
+                    TextColor="Black" BackgroundColor="#E4E4E4" BorderColor="#D2D2D2"
+                    FontSize="36" CornerRadius="40" Clicked="OnSelectNumber"/>
+
+            <Button Text="3" Grid.Row="4"  Grid.Column="2"
+                    TextColor="Black" BackgroundColor="#E4E4E4" BorderColor="#D2D2D2"
+                    FontSize="36" CornerRadius="40" Clicked="OnSelectNumber"/>
+
+            <Button Text="+" Grid.Row="4"  Grid.Column="3"
+                    TextColor="Green" BackgroundColor="#E4E4E4" BorderColor="#D2D2D2"
+                    FontSize="36" CornerRadius="40" Clicked="OnSelectOperator"/>
+
+
+            <!--Fila 5-->
+            <!--Fila 0, = -->
+            
+
+            <Button Text="0" Grid.Row="5"  Grid.Column="2"
+                    TextColor="Black" BackgroundColor="#E4E4E4" BorderColor="#D2D2D2"
+                    FontSize="36" CornerRadius="40" Clicked="OnSelectNumber"/>
+
+
+            <Button Text="=" Grid.Row="5"  Grid.Column="3"
+                    BackgroundColor="Green" TextColor="White"
+                    FontSize="36" CornerRadius="40" Clicked="onCalculate"/>
+
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
